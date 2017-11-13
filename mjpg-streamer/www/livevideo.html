@@ -7,7 +7,7 @@
     <script type="text/javascript" src="jquery.rotate.js"></script>
     <script type="text/javascript">
     
-    var phi = 0, flipped = 0, mirrored = 0;
+    var phi = 180, flipped = 0, mirrored = 0;
 
     function setXformClass () {
         $('.xform').each(function(idx,el) {
@@ -16,6 +16,7 @@
     }
     $(document).ready(function() {
         // set rotation angle phi and toggle rotate class
+        setXformClass();
         $('#rotate').click(function() {
             phi = (phi + 90) % 360;
             setXformClass();
